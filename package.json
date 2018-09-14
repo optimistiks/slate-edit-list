@@ -54,7 +54,6 @@
     "build:flow": "flow-copy-source -v ./lib/ ./dist/",
     "prepublish": "npm run build:dist && npm run build:flow",
     "postpublish": "npm run deploy-example",
-    "prepare": "npm run prepublish",
     "lint": "eslint ./",
     "build-example": "browserify ./example/main.js -o ./example/bundle.js -t [ babelify --presets [ env react stage-0 ] ] -t [ stringify --extensions [.yaml] ]",
     "serve-example": "http-server ./example/ -p 8081",
